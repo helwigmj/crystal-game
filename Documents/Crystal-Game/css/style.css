@@ -1,0 +1,70 @@
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center {
+ text-align: center;
+ display: inline-block;
+}
+
+.crystals {
+    display: inline;
+}
+
+.random-number {
+    background-color: lightgray;
+    border: 5px solid white;
+    color: darkslategray;
+    padding: 15px;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 435px;
+    height: 100px;
+    float: left;
+}
+
+.wins-losses {
+    background-color: lightgray;
+    border: 5px solid white;
+    color: darkslategray;
+    padding: 15px;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 435px;
+    height: 100px;
+    float: right;
+}
+
+.score {
+    max-width: 960px;
+    width: 100%;
+    height: 50px;
+    padding-top: 25px;
+    color: darkslategray;
+    margin: 0 auto;
+    margin: 10px;
+    text-align: center;
+    float: left;
+}
+
+
+
+h1 {
+    width: 100%;
+    background-color: lightgray;
+    font-size: 3.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkslategray;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
