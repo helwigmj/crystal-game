@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Crystal Collector Game</title>
+</head>
+<body>
+  <div class=container>
+
+    <header>    
+        <h1>Crystal Collector</h1>
+    </header>
+
+    <p>How to play:</p>
+    <br>
+    <p>You will be given a random number at the start of the game.</p>
+    <br>
+    <p>The four crystals below are also given a random number- each time 
+        you click a crystal, you will add a specific amount of points to
+        your total score. </p>
+    <br>
+    <p>You win the game by matching your total score to the random number,but if
+        your total score gets higher than the random number, you lose.
+    </p>
+    <br>
+    <p>The value of each crystal is hiddenf orm you until you click on it. Each 
+        time the game starts, the game will change the value of each crystal.
+    </p>
+
+<!-- This container holds the crystals (that are assigned values) for the game -->
+  <div class="container">
+    <div class="crystals">
+        <img src="images/crystal-one.png" type="submit" style="width: 200px; height: 200px" id="one"/>
+    </div>
+
+    <div class="crystals">
+        <img src="images/crystal-two.png" type="submit" style="width: 200px; height: 200px" id="two"/>
+    </div>
+
+    <div class="crystals">
+        <img src="images/crystal-three.png" type="submit" style="width: 200px; height: 200px" id="three"/>
+    </div>
+    
+    <div class="crystals">
+        <img src="images/crystal-four.png" type="submit" style="width: 200px; height: 200px" id="four"/>
+    </div>
+
+<!-- This div holds the random number selected when the page loads -->
+    <div class="random-number">
+       <div id="random-number"></div>
+    </div>
+
+
+<!-- This div holds the game's score: number of wins/losses -->
+  <div class="wins-losses">
+      <strong>Wins: </strong> <span id="winCounter">0</span>
+      <br>
+      <strong>Losses: </strong> <span id="lossCounter">0</span>
+  </div>
+
+  
+<!-- This div holds your score for the current game -->
+  <div class="score">
+      <strong>Your total score: </strong> <span id="currentScore">0</span>
+  </div>
+   
+  </div>
+<script src="javascript/game.js"></script>    
+</body>
+</html>
