@@ -1,0 +1,24 @@
+body {
+    background-color: lightsteelblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    width: 80%;
+    max-width: 950px;
+    border: 1px gray solid;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#header {
+    color: white;
+    margin-top: 0;
+    border: 2px solid black;
+    padding: 5px;
+    height: 150px;
+    background: beige;
+    background-image: url("https://www.uoguelph.ca/cbssc/sites/uoguelph.ca.cbssc/files/styles/large/public/field/image/coffee-beans.jpg?itok=5jxHR4zR");
+}
