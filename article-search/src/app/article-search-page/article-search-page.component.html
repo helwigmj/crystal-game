@@ -1,0 +1,73 @@
+<div id="wrapper">
+  <div class="search-form">
+    <h3>Keyword Search</h3>
+    <br>
+    <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+      <mat-form-field>
+        <input matInput placeholder="Keyword" required #keyword='ngModel' name='keyword' [(ngModel)]='searchData.q'>
+        <mat-error *ngIf="keyword.invalid && (keyword.dirty || keyword.touched)">
+          <div *ngIf="keyword.errors.required">
+            Keyword is required for search.
+          </div>
+        </mat-error>
+      </mat-form-field>
+
+      <br>
+      <button mat-raised-button type='submit'>Search</button>
+    </form>
+    <br>
+  </div>
+
+  <div class="float-right">
+    <h3>Results</h3>
+    <div *ngIf="firstResults.length > 0">
+      <p>Total: {{ firstResults.length }}</p>
+      <mat-card *ngFor="let article of firstResults | slice:0:10; let i=index">
+        <mat-list role="list">
+          <mat-list-item>
+            <mat-card-title>
+              {{article.title}}
+            </mat-card-title>
+          </mat-list-item>
+        </mat-list>
+        <mat-card-subtitle>
+          <mat-list role="list">
+            <mat-list-item>Published Date: {{article.published_date | date: 'MM/dd/yyyy h:mm a z' }}</mat-list-item>
+            <mat-list-item><a href='{{article.url}}'>Link</a></mat-list-item>
+          </mat-list>
+        </mat-card-subtitle>
+        <mat-card-content>
+          <mat-list role="list">
+            <mat-list-item>{{article.abstract}}</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div *ngIf="results">
+      <div *ngIf="total > 0">
+        <p>Total: {{ total }}</p>
+        <mat-card *ngFor="let article of results">
+          <mat-list role=" list">
+          <mat-list-item>
+            <mat-card-title>
+              {{article.headline.main}}
+            </mat-card-title>
+          </mat-list-item>
+          </mat-list>
+          <mat-card-subtitle>
+            <mat-list role="list">
+              <mat-list-item>Published Date: {{article.pub_date | date: 'MM/dd/yyyy h:mm a z' }}</mat-list-item>
+              <mat-list-item><a href='{{article.web_url}}'>Link to Original Article</a>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-subtitle>
+          <mat-card-content>
+            <mat-list role="list">
+              <mat-list-item>{{article.abstract}}</mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>

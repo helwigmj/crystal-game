@@ -1,0 +1,27 @@
+#wrapper {
+  display: flex;
+}
+
+.search-form {
+  display: inline-block;
+  width: 50%;
+
+  mat-form-field {
+    width: 75%;
+  }
+}
+
+.float-right {
+  flex: 1;
+  margin: 0 2em;
+}
+
+mat-card {
+  margin: 0 0 2em 0;
+  padding: 2em 1em;
+  overflow: hidden;
+}
+
+mat-list-item {
+  height: auto;
+}

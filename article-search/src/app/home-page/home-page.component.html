@@ -1,0 +1,13 @@
+<div class="center">
+  <h1>Current Section: {{selectedSection | titlecase }}</h1>
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item *ngFor='let s of sections' (click)='selectSection(s)'>{{ s | titlecase }}
+    </button>
+  </mat-menu>
+  <button mat-raised-button [matMenuTriggerFor]="appMenu">
+    Sections <i class="material-icons">keyboard_arrow_down</i>
+  </button>
+</div>
+<br>
+
+<app-article-search-page [selectedSection]="selectedSection"></app-article-search-page>
